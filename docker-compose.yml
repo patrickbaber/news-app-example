@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:
+  nginx:
+    image: nginx:1.13-alpine
+    depends_on:
+      - php
+    ports:
+      - "80:80"
+    volumes:
+      - "./docker/nginx/etc:/etc/nginx/conf.d/"
+      - "./src:/var/www/html/:cached"
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    depends_on:
+      - mysql
+    volumes:
+      - "./src:/var/www/html/:cached"
+  mysql:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=db
+      - MYSQL_PASSWORD=db
+    ports:
+      - "3306:3306"
