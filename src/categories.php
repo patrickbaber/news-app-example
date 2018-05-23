@@ -10,7 +10,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col">
-                <h1>Nachrichten</h1>
+                <h1>Kategorien</h1>
             </div>
             <div class="col pt-1">
                 <button type="button" class="btn btn-primary btn-lg float-right">Anlegen</button>
@@ -23,17 +23,13 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Datum</th>
-                    <th scope="col">Titel</th>
-                    <th scope="col">Kategorie</th>
+                    <th scope="col">Name</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>01.01.2018</td>
-                    <td>Nachrichten-Titel 1</td>
                     <td>Sport</td>
                     <td>
                         <div class="float-right">
@@ -44,8 +40,6 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>01.01.2019</td>
-                    <td>Nachrichten-Titel 2</td>
                     <td>Wissenschaft</td>
                     <td>
                         <div class="float-right">
@@ -56,8 +50,6 @@
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>01.01.2020</td>
-                    <td>Nachrichten-Titel 3</td>
                     <td>Wirtschaft</td>
                     <td>
                         <div class="float-right">
