@@ -33,8 +33,8 @@
                     <td>Sport</td>
                     <td>
                         <div class="float-right">
-                            <button type="button" class="btn btn-secondary btn-sm">Bearbeiten</button>
-                            <button type="button" class="btn btn-danger btn-sm">Löschen</button>
+                            <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
+                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
                         </div>
                     </td>
                 </tr>
@@ -43,8 +43,8 @@
                     <td>Wissenschaft</td>
                     <td>
                         <div class="float-right">
-                            <button type="button" class="btn btn-secondary btn-sm">Bearbeiten</button>
-                            <button type="button" class="btn btn-danger btn-sm">Löschen</button>
+                            <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
+                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
                         </div>
                     </td>
                 </tr>
@@ -53,8 +53,8 @@
                     <td>Wirtschaft</td>
                     <td>
                         <div class="float-right">
-                            <button type="button" class="btn btn-secondary btn-sm">Bearbeiten</button>
-                            <button type="button" class="btn btn-danger btn-sm">Löschen</button>
+                            <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
+                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
                         </div>
                     </td>
                 </tr>

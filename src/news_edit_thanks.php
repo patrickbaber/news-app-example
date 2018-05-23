@@ -8,9 +8,9 @@
     <?php require 'include_navigation.php'; ?>
 
     <div class="container mt-4">
-        <h1>Kategorie angelegt</h1>
-        <p class="mt-4">Die Kategorie wurde erfolgreich im System gespeichert.</p>
-        <a class="btn btn-primary mt-3" href="categories.php" role="button">Zur Übersicht</a>
+        <h1>Nachricht aktualisiert</h1>
+        <p class="mt-4">Die Nachricht wurde erfolgreich im System aktualisiert.</p>
+        <a class="btn btn-primary mt-3" href="index.php" role="button">Zur Übersicht</a>
     </div>
 
     <?php require 'include_body_end.php'; ?>
