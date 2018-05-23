@@ -13,7 +13,7 @@
                 <h1>Kategorien</h1>
             </div>
             <div class="col pt-1">
-                <button type="button" class="btn btn-primary btn-lg float-right">Anlegen</button>
+                <a class="btn btn-primary btn-lg float-right" href="category_add.php" role="button">Anlegen</a>
             </div>
         </div>
     </div>

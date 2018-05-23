@@ -36,7 +36,8 @@
                     Aktiviert
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button>
+            <!-- <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button> -->
+            <a class="btn btn-primary mt-4" href="news_thanks.php" role="button">Hinzufügen</a>
         </form>
     </div>
 
