@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+
+require 'include_database.php';
+
+$sql = 'UPDATE category SET name = ? WHERE id = ?';
+$pdo->prepare($sql)->execute([$_POST['name'], $_GET['id']]);
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>

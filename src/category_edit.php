@@ -20,13 +20,12 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
         <div class="row">
             <div class="col-sm-6">
                 <h1>Kategorie bearbeiten</h1>
-                <form class="mt-4">
+                <form class="mt-4" method="POST" action="category_edit_thanks.php?id=<?php echo $row['id'] ?>">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="z. B. Politik" value="Medizin">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="z. B. Politik" value="<?php echo $row['name'] ?>">
                     </div>
-                    <!-- <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button> -->
-                    <a class="btn btn-primary mt-4" href="category_edit_thanks.php" role="button">Aktualisieren</a>
+                    <button type="submit" class="btn btn-primary mt-4">Aktualisieren</button>
                 </form>
             </div>
         </div>
