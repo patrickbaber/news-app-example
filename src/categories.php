@@ -1,4 +1,10 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$results = $pdo->query('SELECT * FROM category');
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
@@ -28,36 +34,18 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($results as $row): ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Sport</td>
+                    <th scope="row"><?php echo $row['id'] ?></th>
+                    <td><?php echo $row['name'] ?></td>
                     <td>
                         <div class="float-right">
                             <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
+                            <a href="category_delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm">Löschen</a>
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Wissenschaft</td>
-                    <td>
-                        <div class="float-right">
-                            <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Wirtschaft</td>
-                    <td>
-                        <div class="float-right">
-                            <a href="category_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="category_delete.php" class="btn btn-danger btn-sm">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

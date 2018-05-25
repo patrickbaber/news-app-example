@@ -11,13 +11,12 @@
         <div class="row">
             <div class="col-sm-6">
                 <h1>Kategorie anlegen</h1>
-                <form class="mt-4">
+                <form class="mt-4" action="category_add_thanks.php" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="z. B. Politik">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="z. B. Politik">
                     </div>
-                    <!-- <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button> -->
-                    <a class="btn btn-primary mt-4" href="category_thanks.php" role="button">Hinzufügen</a>
+                    <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button>
                 </form>
             </div>
         </div>

@@ -1,4 +1,14 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$sql = "INSERT INTO category SET name = ?";
+
+$pdo->prepare($sql)->execute([
+  $_POST['name'], 
+]);
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
