@@ -7,7 +7,12 @@
 - Open http://localhost in browser
 - Stop containers: `$ docker-compose stop`
 
-## Helpers
+## MySQL Tools
+
+- [HeidiSQL for Windows](https://www.heidisql.com/)
+- [SequelPro for macOS](https://sequelpro.com/)
+
+## Command Line Helpers
 
 - Jump to user directory: `$ cd`
 - Jump to subfolder: `$ cd subfolder/`
