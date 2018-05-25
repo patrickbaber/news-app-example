@@ -1,4 +1,13 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$sql = "SELECT * FROM category WHERE id = ?";
+$statement = $pdo->prepare($sql);
+$statement->execute([$_GET['id']]);
+$row = $statement->fetch(PDO::FETCH_ASSOC);
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
