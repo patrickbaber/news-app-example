@@ -20,7 +20,7 @@ $pdo->prepare($sql)->execute([
   $_POST['short_text'], 
   $_POST['text'], 
   $is_active, 
-  3,
+  $_POST['category'],
 ]);
 
 ?><!doctype html>

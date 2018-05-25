@@ -1,4 +1,18 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$results = $pdo->query('SELECT 
+    news.title, 
+    news.id, 
+    category.name
+FROM 
+    news, 
+    category
+WHERE 
+    news.id_category = category.id');
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
@@ -23,18 +37,17 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Datum</th>
                     <th scope="col">Titel</th>
                     <th scope="col">Kategorie</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($results as $row): ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>01.01.2018</td>
-                    <td>Nachrichten-Titel 1</td>
-                    <td>Sport</td>
+                    <th scope="row"><?php echo $row['id'] ?></th>
+                    <td><?php echo $row['title'] ?></td>
+                    <td><?php echo $row['name'] ?></td>
                     <td>
                         <div class="float-right">
                             <a href="news_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
@@ -42,30 +55,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>01.01.2019</td>
-                    <td>Nachrichten-Titel 2</td>
-                    <td>Wissenschaft</td>
-                    <td>
-                        <div class="float-right">
-                            <a href="news_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="news_delete.php" class="btn btn-danger btn-sm">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>01.01.2020</td>
-                    <td>Nachrichten-Titel 3</td>
-                    <td>Wirtschaft</td>
-                    <td>
-                        <div class="float-right">
-                            <a href="news_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="news_delete.php" class="btn btn-danger btn-sm">Löschen</a>
-                        </div>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

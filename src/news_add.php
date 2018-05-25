@@ -1,4 +1,10 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$results = $pdo->query('SELECT * FROM category');
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
@@ -27,9 +33,9 @@
                     <div class="form-group">
                         <label for="category">Kategorie</label>
                         <select class="form-control" id="category" name="category">
-                            <option>Sport</option>
-                            <option>Wirtschaft</option>
-                            <option>Wissenschaft</option>
+                            <?php foreach ($results as $row): ?>
+                                <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-check">

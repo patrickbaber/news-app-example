@@ -1,4 +1,10 @@
-<!doctype html>
+<?php 
+
+require 'include_database.php';
+
+$results = $pdo->query('SELECT * FROM category');
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>
