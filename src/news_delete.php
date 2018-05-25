@@ -1,4 +1,12 @@
-<!doctype html>
+<?php
+
+require 'include_database.php';
+
+$sql = "DELETE FROM news WHERE id = ?";
+
+$pdo->prepare($sql)->execute([$_GET['id']]);
+
+?><!doctype html>
 <html lang="en">
   <head>
     <?php require 'include_head.php'; ?>

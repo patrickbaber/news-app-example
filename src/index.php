@@ -50,8 +50,8 @@ WHERE
                     <td><?php echo $row['name'] ?></td>
                     <td>
                         <div class="float-right">
-                            <a href="news_edit.php" class="btn btn-secondary btn-sm">Bearbeiten</a>
-                            <a href="news_delete.php" class="btn btn-danger btn-sm">Löschen</a>
+                            <a href="news_edit.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary btn-sm">Bearbeiten</a>
+                            <a href="news_delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm">Löschen</a>
                         </div>
                     </td>
                 </tr>
